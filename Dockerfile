@@ -5,7 +5,8 @@ RUN apt-get update && apt-get install -y git python3-dev gcc \
 
 COPY requirements.txt .
 
-RUN pip install --upgrade -r requirements.txt
+RUN pip install numpy
+RUN pip install --upgrade --no-cache-dir -r requirements.txt
 
 COPY app app/
 
